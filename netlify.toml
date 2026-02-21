@@ -1,0 +1,17 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Redirect logixfleet.com to logixfleet.ai
+[[redirects]]
+  from = "/*"
+  to = "https://logixfleet.ai/:splat"
+  status = 301
+  force = true
+  conditions = {Host = ["logixfleet.com", "www.logixfleet.com"]}
+
+# SPA fallback - handle all routes for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

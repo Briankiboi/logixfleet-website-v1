@@ -1,0 +1,343 @@
+.page-content {
+    flex: 1 0 auto;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    flex: 1;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main-container .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 2rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.demo-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Left Side - Information */
+.info-content {
+    min-width: 0;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.benefit-icon {
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.benefit-icon::after {
+    content: "\2713";
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.benefit-text {
+    font-size: 0.95rem;
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Right Side - Form */
+.form-container {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid #e2e8f0;
+    height: fit-content;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 6px;
+}
+
+.form-subtitle {
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #2d3748;
+    font-size: 0.85rem;
+}
+
+.required {
+    color: #e53e3e;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #fff;
+    color: #2d3748;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(81, 59, 243, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #a0aec0;
+}
+
+/* Phone Number Field */
+.phone-container {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 8px;
+}
+
+.phone-container select {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 28px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.phone-container input {
+    min-width: 0;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(81, 59, 243, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.submit-btn:hover {
+    background: var(--primary-hover);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Messages */
+.message {
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 16px;
+    text-align: center;
+    animation: slideIn 0.3s ease-out;
+}
+
+.message.success {
+    background: #f0fff4;
+    border: 1px solid #9ae6b4;
+    color: #2f855a;
+}
+
+.message.error {
+    background: #fed7d7;
+    border: 1px solid #feb2b2;
+    color: #c53030;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Error Messages */
+.error-message {
+    color: #e53e3e;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 6px;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    line-height: 1.4;
+}
+
+.error-message::before {
+    content: "\26A0";
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.form-group.error input,
+.form-group.error select {
+    border-color: #e53e3e;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .demo-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .info-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding-top: 90px;
+        padding-bottom: 10px;
+    }
+
+    .main-container .container {
+        padding: 10px 16px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .page-subtitle {
+        text-align: center;
+    }
+
+    .form-container {
+        padding: 24px 16px;
+    }
+
+    .phone-container {
+        grid-template-columns: 120px 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+
+    .form-container {
+        padding: 20px 12px;
+    }
+
+    .phone-container {
+        grid-template-columns: 100px 1fr;
+    }
+}

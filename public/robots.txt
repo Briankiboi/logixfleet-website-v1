@@ -1,0 +1,22 @@
+# robots.txt for LogixFleet
+# https://logixfleet.ai
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://logixfleet.ai/sitemap.xml
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
+
+# Block common non-content paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/chunks/
+
+# Allow search engines to index all public pages
+Allow: /fleet-solution
+Allow: /delivery-solution
+Allow: /integration
+Allow: /book-a-demo

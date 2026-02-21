@@ -1,0 +1,6 @@
+# Redirect logixfleet.com to logixfleet.ai
+https://logixfleet.com/* https://logixfleet.ai/:splat 301!
+https://www.logixfleet.com/* https://logixfleet.ai/:splat 301!
+
+# SPA fallback
+/*    /index.html   200
