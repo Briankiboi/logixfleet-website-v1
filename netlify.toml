@@ -3,6 +3,8 @@
   command = "npm run build"
 
 # Redirect logixfleet.com to logixfleet.ai
+
+
 [[redirects]]
   from = "/*"
   to = "https://logixfleet.ai/:splat"
